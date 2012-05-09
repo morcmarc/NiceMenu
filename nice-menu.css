@@ -1,0 +1,271 @@
+/**
+ * Name: Nice Menu
+ * Version: 0.2
+ * Author: Marcell Jusztin - http://www.marcelljusztin.com
+ * Description: A simple, elegant, colorful, CSS3 animated menu
+ * Tags: css3, animation, menu, simple, elegant, colourful
+ * License: http://creativecommons.org/licenses/by-sa/3.0/
+ * 
+ * Changelog v0.2:
+ * - Changed animation to support percentage, so there is no need to update values one-by-one
+ * 
+ *
+**/
+
+ul.nice-menu {
+  list-style: none;
+  margin-top: 30px;
+  width: 200px; /* Set the size here */
+  overflow: hidden;
+}
+
+@-moz-keyframes expand {  
+  0% {
+    width: 5%;
+    padding-left: 0px;
+  }
+  
+  100% {
+    width: 100%;
+    padding-left: 20px;
+  }
+}
+
+@-moz-keyframes expand-bounce {
+  0% {
+    width: 5%;
+    padding-left: 0px;
+  }
+  
+  50% {
+    width: 100%;
+  }
+  
+  70% {
+    width: 85%;
+  }
+  
+  80% {
+    width: 100%;
+  }
+  
+  90% {
+    width: 95%;
+  }
+  
+  100% {
+    width: 100%;
+    padding-left: 20px;
+  }
+}
+
+@-webkit-keyframes expand {  
+  0% {
+    width: 5%;
+    padding-left: 0px;
+  }
+  
+  100% {
+    width: 100%;
+    padding-left: 20px;
+  }
+}
+
+@-webkit-keyframes expand-bounce {  
+  0% {
+    width: 5%;
+    padding-left: 0px;
+  }
+  
+  50% {
+    width: 100%;
+  }
+  
+  70% {
+    width: 85%;
+  }
+  
+  80% {
+    width: 100%;
+  }
+  
+  90% {
+    width: 95%;
+  }
+  
+  100% {
+    width: 100%;
+    padding-left: 20px;
+  }
+}
+
+@-moz-keyframes shrink {
+  
+  0% {
+    width: 100%;
+    padding-left: 20px;
+  }
+  
+  100% {
+    width: 5%;
+    padding-left: 0px;
+  }
+}
+
+@-moz-keyframes shrink-bounce {
+  
+  0% {
+    width: 100%;
+    padding-left: 20px;
+  }
+  
+  50% {
+    width: 5%;
+  }
+  
+  70% {
+    width: 20%;
+  }
+  
+  80% {
+    width: 5%;
+  }
+  
+  90% {
+    width: 10%;
+  }
+  
+  100% {
+    width: 5%;
+    padding-left: 0px;
+  }
+}
+
+@-webkit-keyframes shrink {
+  
+  0% {
+    width: 100%;
+    padding-left: 20px;
+  }
+  
+  100% {
+    width: 5%;
+    padding-left: 0px;
+  }
+}
+
+@-webkit-keyframes shrink-bounce {
+  
+  0% {
+    width: 100%;
+    padding-left: 20px;
+  }
+  
+  50% {
+    width: 5%;
+  }
+  
+  70% {
+    width: 20%;
+  }
+  
+  80% {
+    width: 5%;
+  }
+  
+  90% {
+    width: 10%;
+  }
+  
+  100% {
+    width: 5%;
+    padding-left: 0px;
+  }
+}
+
+ul.nice-menu li {
+  height: 30px;
+  line-height: 20px;
+  padding: 0px 0px 0px 0px;
+  margin-top: 3px;
+  background: transparent;
+  width: 5%;
+}
+
+ul.nice-menu.tight li {
+  margin-top: 0 !important;
+}
+
+ul.nice-menu li {
+  -moz-animation-name: shrink;
+  -moz-animation-duration: 0.5s;
+  -moz-animation-timing-function: ease-in-out;
+  -webkit-animation-name: shrink;
+  -webkit-animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-in-out;
+}
+
+ul.nice-menu.bounce li {
+  -moz-animation-name: shrink-bounce;
+  -moz-animation-duration: 0.5s;
+  -moz-animation-timing-function: ease-in-out;
+  -webkit-animation-name: shrink-bounce;
+  -webkit-animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-in-out;
+}
+
+ul.nice-menu li:hover {
+  width: 100%;
+  padding-left: 20px;
+  -moz-animation-name: expand;
+  -moz-animation-duration: 0.5s;
+  -moz-animation-timing-function: ease-in-out;
+  -webkit-animation-name: expand;
+  -webkit-animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-in-out;
+}
+
+ul.nice-menu.bounce li:hover {
+  -moz-animation-name: expand-bounce;
+  -moz-animation-duration: 0.5s;
+  -moz-animation-timing-function: ease-in-out;
+  -webkit-animation-name: expand-bounce;
+  -webkit-animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-in-out;
+}
+
+ul.nice-menu a {
+  width: 100%;
+  text-decoration: none;
+  font-size: 14px;
+  color: #FFF;
+  text-shadow: 0px 0px 3px #333;
+  font-weight: bold;
+  position: absolute;
+  padding: 5px 0px;
+  padding-left: 20px;
+}
+
+ul.nice-menu li.green {
+  background: rgb(107,186,112);
+}
+
+ul.nice-menu li.blue {
+  background: rgb(78,92,127);
+}
+
+ul.nice-menu li.orange {
+  background: rgb(216,121,40);
+}
+
+ul.nice-menu li.dark {
+  background: rgb(42,32,30);
+} 
+
+ul.nice-menu li.red {
+  background: rgb(178,59,30);
+}
+
+ul.nice-menu li.bright {
+  background: rgb(241,249,210);
+}	
